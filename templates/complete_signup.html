@@ -1,0 +1,10 @@
+{% extends "templates.html" %}
+{% block main_contents %}
+{% if password == None%}
+<a href="/signup">すみません。エラーが起きました。再び登録してください。</a>
+{% else %}
+<h2>{{ username }}さん、登録完了しました！！</h2>
+<p>パスワード：{{ email }}</p>
+<p>パスワード：{{ password }}</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "templates.html" %}
+{% block main_contents %}
+<h2>新規登録</h2>
+<!-- /へ移動するという意味でのaction -->
+<form action="/try_signup" method="POST">
+  <p>名前：<input type="text" name="username" size="30" required></p>
+  <p>メールアドレス：<input type="email" name="email" size="30" required></p>
+  <p>パスワード：<input type="password" pattern="^[0-9]+$" name="password" size="30" required></p>
+  <p>
+    <input type="submit" value="確定" />
+    <input type="reset" value="消去" />
+  </p>
+</form>
+{% endblock %}
